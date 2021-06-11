@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/*
+Theme Name: 2leftpaws 
+Theme URI: https://wordpress.org/themes/2leftpaws/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Requires at least: 4.9.6
+Requires PHP: 5.2.4
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentynineteen
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+Bundled block pattern images:
+Abstract Background by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-background-0SRRVNMKBX
+Abstract Waves by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-waves-0KREGLTZQ3
+Abstract Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-bokeh-P4KVZBMQ6L
+Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-VN4G84GL8H
+*/
+
+:root {
+    --red-color: #EB2359!important;
+    --dark-text-color: #3F3F3F;
+    --background-dark-mode: #1C1C1C;
+    --background-light-mode: #FFFCFC;
+}
+
+body {
+    background-color: var(--background-dark-mode);
+}
+
+p {
+    color: var(--background-light-mode);
+}
+
+#hey_there::after {
+    content: "WILL!";
+    color: var(--red-color);
+}
+
+.title-about-me {
+    font-size: 6rem;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,0);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    /* color: rgba(255,255,255,.5); */
+    color: var(--red-color);
+}
+
+#get-in-touch-text {
+    font-size: 4rem;
+    color:var(--red-color);
+}
+
+#projects-heading {
+    color: var(--red-color);
+    font-size: 4rem;
+}
+
+#a-title-footer-contact {
+    color: #40403D;
+}
+
+#hey_there {
+    font-family: 'Gugi', cursive;
+}
+
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#myBtn i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#myBtn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#myBtn:hover i {
+    color: red;
+    top: 5px;
+}
+
+.card {
+    background-color: transparent;
+    border-color: var(--red-color);    
+}
+
+#about_me_photo {
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    /* margin: auto;
+    margin-top: 20px; */
+    background-image: url(images/aboutme.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -20px;
+}
+
+textarea {
+    resize: none;
+}
+
+#mobile_light_mode {
+    display: none;
+    margin-left: 10px;
+}
+
+#name_twoleftpaws {
+    display: flex;
+}
+
+.light_mode {
+    background-color: var(--background-light-mode);
+    
+}
+
+.p_light_mode {
+    color: var(--dark-text-color);
+}
+
+.nav_bar_light_mode {
+    color: var(--dark-text-color);
+}
+
+.titles_red {
+    color: var(--red-color);
+}
+
+body.light_mode #name_twoleftpaws {
+    color: var(--red-color);
+}
+
+.card:hover{
+    transform: scale(1.05) translateZ(0);
+  }
+
+  .wpcf7-form {
+    display: flex;
+    flex-direction: inherit;
+  }
+
+
+@media (max-width: 992px) {
+    #desktop_light_mode {
+        display: none;
+    }
+
+    #mobile_light_mode {
+        display: inherit;
+    }
+
+    .wpcf7-form {
+        display: flex;
+        flex-direction: column;
+      }
+}
